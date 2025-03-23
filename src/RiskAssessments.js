@@ -1,8 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./RiskAssessments.css";
 import logo from "./assets/logo.jpg";
 import riskBackground from "./assets/risk.jpg";
-
 
 const RiskAssessments = () => {
   return (
@@ -42,9 +42,9 @@ const RiskAssessments = () => {
         <p className="case-study-text">
           See how organizations mitigate cybersecurity risks with our expert risk assessments.
         </p>
-        <a href="/case-study" className="case-study-button">
+        <Link to="/case-studies" className="case-study-button">
           Read Case Studies
-        </a>
+        </Link>
       </div>
     </div>
   );
