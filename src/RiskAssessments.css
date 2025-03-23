@@ -1,0 +1,213 @@
+/* 🌌 General Styling */
+body {
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* 📌 Container */
+.risk-container {
+    text-align: center;
+    width: 100vw;
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+/* 🔥 Header */
+.risk-header {
+    text-align: center;
+    max-width: 700px;
+    margin-top: -5px;
+    margin-bottom: 30px;
+}
+
+.risk-header h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+/* ✨ Animated Text */
+.animated-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 19px;
+    display: inline-block;
+    position: relative;
+}
+
+/* 🎨 Underline effect */
+.animated-text::before,
+.animated-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 3px;
+}
+
+/* First underline */
+.animated-text::before {
+    width: 100%;
+    bottom: -4px;
+    background-color: cyan;
+    animation: waveEffect 2.2s infinite ease-in-out;
+}
+
+/* Second underline */
+.animated-text::after {
+    width: 70%;
+    bottom: -16px;
+    left: 15%;
+    background-color: hotpink;
+    animation: waveEffect 2.2s infinite ease-in-out;
+}
+
+/* 🌊 Wave Animation */
+@keyframes waveEffect {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+/* 🔹 Risk Content */
+.risk-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* 🎯 Risk Cards */
+.risk-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.risk-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+.risk-card h2 {
+    color: #ffcc00;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.risk-card p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* 📌 Bottom Case Study Section */
+.case-study-section {
+    background: linear-gradient(to right, #6a0dad, #8b0000);
+    padding: 20px 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Ensures proper spacing between elements */
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+/* 🖼 Logo Styling */
+.case-study-logo {
+    width: 50px; /* Adjust size */
+    height: auto;
+    margin-right: 15px; /* Space between logo and text */
+}
+
+/* Left-Aligned Text */
+.case-study-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    white-space: nowrap;
+    flex-grow: 1; /* Allows text to take available space */
+}
+
+/* Right-Aligned Button */
+.case-study-button {
+    background: #ffffff;
+    color: #000;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    margin-left: auto; /* Pushes the button to the right */
+}
+
+.case-study-button:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* 📱 Mobile Responsiveness */
+@media (max-width: 768px) {
+    .risk-container {
+        padding: 20px;
+    }
+
+    .risk-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .animated-text {
+        font-size: 1.4rem;
+    }
+
+    .risk-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .risk-card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .case-study-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .case-study-logo {
+        width: 100px; /* Adjust for smaller screens */
+        margin-bottom: 10px;
+    }
+
+    .case-study-text {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+
+    .case-study-button {
+        width: 100%;
+        text-align: center;
+        padding: 10px 20px;
+        margin-left: 0; /* Ensures proper centering */
+    }
+}
