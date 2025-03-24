@@ -1,11 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
 .popup-container {
+    padding-top: 6%;
     display: flex;
     justify-content: center;
     align-items: center;

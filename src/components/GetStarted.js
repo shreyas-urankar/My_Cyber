@@ -30,7 +30,7 @@ const GetStarted = () => {
     return (
         <div className="popup-container">
             <div className="popup">
-                <span className="close-btn" onClick={closePopup}>×</span>
+                <span className="close-btn" onClick={closePopup}>x</span>
                 <h2>Let's make cyberspace secure together!</h2>
                 <h3>Requirements</h3>
                 <form onSubmit={handleSubmit}>
