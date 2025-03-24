@@ -64,50 +64,6 @@ body {
     width: 150px;
 }
 
-/* Footer */
-footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-.footer-container {
-    max-width: 600px;
-    margin: auto;
-}
-
-.social-icons a {
-    color: white;
-    margin: 0 10px;
-    font-size: 1.5rem;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: #00aaff;
-}
-
-.contact-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background: #00aaff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.contact-button:hover {
-    background: #0088cc;
-}
-
-.copyright {
-    margin-top: 10px;
-    font-size: 0.9rem;
-}
-
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .nav-links {

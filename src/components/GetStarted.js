@@ -45,28 +45,29 @@ const GetStarted = () => {
                             <span className="custom-radio"></span> Cybersecurity Training
                         </label>
                     </div>
-                    <label>Full Name</label>
+                    <label>Full Name  <span className="required">*</span></label>
                     <input type="text" name="fullName" placeholder="Full Name" required onChange={handleChange} />
                     <label>Organization <span className="required">*</span></label>
                     <input type="text" name="organization" placeholder="Organization*" required onChange={handleChange} />
                     <label>Designation <span className="required">*</span></label>
                     <select name="designation" required onChange={handleChange}>
-                        <option>Select Designation</option>
-                        <option>CEO</option>
-                        <option>Manager</option>
-                        <option>Security Analyst</option>
-                        <option>Other</option>
+                        <option value="">Select Designation</option>
+                        <option value="CEO">CEO</option>
+                        <option value="Manager">Manager</option>
+                        <option value="Security Analyst">Security Analyst</option>
+                        <option value="Other">Other</option>
                     </select>
                     <label>Official Email ID <span className="required">*</span></label>
                     <input type="email" name="email" placeholder="Official Email ID*" required onChange={handleChange} />
-                    <label>Contact Number</label>
+                    <label>Contact Number  <span className="required">*</span></label>
                     <input type="tel" name="contact" placeholder="Contact Number" onChange={handleChange} />
                     <button type="submit">Submit</button>
                 </form>
                 <div className="testimonial">
                     <h3>What our clients are saying!</h3>
+                    <br />
                     <p>
-                        <em>Trade Ledger takes privacy and security of its customers and system very seriously. We needed an independent audit to check our systems and wanted to partner with a team that understands the compliance environment of banks.</em>
+                        <h4>Trade Ledger takes privacy and security of its customers and system very seriously. We needed an independent audit to check our systems and wanted to partner with a team that understands the compliance environment of banks.</h4>
                     </p>
                 </div>
             </div>

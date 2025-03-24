@@ -6,74 +6,39 @@ body {
     background-color: #ffffff;
 }
 
-/* Header */
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #d62839;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding-left: 20px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-}
-
-nav ul li .cta {
-    background: #d62839;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 5px;
-}
-
-/* Mobile Menu Icon */
-.menu-icon {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
 /* Advisory Section */
 .advisory {
+    background-color: #ffffff; /* Ensures white background */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 50px;
-    padding: 120px 50px;
-    background-color: white;
+    padding: 100px 50px;
+    min-height: 100vh; /* Makes sure it covers full viewport */
 }
 
-/* Content Styling */
-.content {
-    max-width: 50%;
+/* Text Content */
+.advisory .content {
+    max-width: 600px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-h1 {
+
+.advisory h1 {
     font-size: 2.5em;
     color: #222;
     font-weight: bold;
 }
 
-p {
+.advisory p {
     font-size: 1.2em;
-    color: #444;
+    color: #666;
     margin-bottom: 20px;
-    line-height: 1.5;
 }
 
-/* Button Styling */
-button {
+.advisory button {
     background-color: #d62839;
     color: white;
     padding: 12px 24px;
@@ -84,37 +49,36 @@ button {
     transition: background 0.3s ease-in-out;
 }
 
-button:hover {
+.advisory button:hover {
     background-color: #b71c28;
 }
 
 /* Image Styling */
-.image-container img {
-    width: 350px;
+.advisory .image-container img {
+    width: 400px;
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
     .advisory {
         flex-direction: column;
         text-align: center;
+        padding: 50px 20px;
     }
 
-    .content {
-        max-width: 100%;
+    .advisory h1 {
+        font-size: 2em;
     }
 
-    .menu-icon {
-        display: block;
+    .advisory p {
+        font-size: 1.1em;
     }
 
-    nav ul {
-        display: none;
-    }
-
-    .image-container img {
-        width: 80%;
+    .advisory .image-container img {
+        width: 100%;
+        max-width: 350px;
     }
 }

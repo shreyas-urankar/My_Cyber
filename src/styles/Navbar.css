@@ -4,12 +4,21 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.3); /* Slightly transparent */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 10px 20px;
     z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+.navbar.visible {
+    transform: translateY(0);
 }
 
 .logo {
@@ -18,28 +27,37 @@
 }
 
 .logo img {
-    width: 50px;
-    height: 50px;
-    border-radius: 0;
+    width: 55px;
+    height: 55px;
+    margin-right: 1rem;
+    box-shadow: 0 0 15px rgba(0, 196, 255, 0.5);
+    transition: all 0.3s ease;
+   
 }
+
+.logo:hover .logo-img {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 196, 255, 0.8);
+   }
+   
 
 .logo span {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bold;
     margin-left: 10px;
+    color: rgb(58, 97, 212);
 }
 
-/* Adjust Navbar Links Alignment */
+/* Navbar Links */
 .nav-links {
     display: flex;
     list-style: none;
-    position: relative;
-    margin-left: 50px; /* Moves the nav links slightly to the right */
+    margin-left: auto;
+    gap: 11px; /* Even spacing */
 }
 
 .nav-links li {
     position: relative;
-    margin: 0 15px;
 }
 
 .nav-links a {
@@ -55,7 +73,7 @@
     color: #00aaff;
 }
 
-/* Dropdown Menu */
+/* Dropdown */
 .dropdown {
     position: relative;
 }
@@ -82,7 +100,7 @@
     list-style: none;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.2s ease-in-out;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.2s;
     transform: translateY(10px);
 }
 
@@ -101,14 +119,14 @@
     color: white;
     font-size: 1rem;
     display: block;
-    transition: background 0.3s ease;
+    transition: background 0.3s;
 }
 
 .dropdown-menu a:hover {
     background: rgba(0, 170, 255, 0.5);
 }
 
-/* Hide menu button in desktop mode */
+/* Mobile Menu */
 .menu-toggle {
     display: none;
     background: none;
@@ -116,4 +134,40 @@
     color: white;
     font-size: 2rem;
     cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        display: none;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .nav-links.open {
+        display: flex;
+        padding: 20px 0;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .dropdown-menu {
+        position: static;
+        background: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
 }

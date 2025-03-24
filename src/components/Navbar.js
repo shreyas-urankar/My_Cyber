@@ -1,17 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../assets/logo.jpg";
 import { FaBars, FaChevronDown } from "react-icons/fa";
-import "../styles/Navbar.css"; 
+import "../styles/Navbar.css";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [dropdown, setDropdown] = useState(null);
+    const [showNavbar, setShowNavbar] = useState(true);
+    let lastScrollY = window.scrollY;
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > lastScrollY) {
+                setShowNavbar(false); // Hide navbar when scrolling down
+            } else {
+                setShowNavbar(true); // Show navbar when scrolling up
+            }
+            lastScrollY = window.scrollY;
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
-        <nav className="navbar">
+        <nav className={`navbar ${showNavbar ? "visible" : "hidden"}`}>
             <div className="logo">
-                <img src={logo} alt="DigiDefence Logo" />
+                <img className="logo-img" src={logo} alt="DigiDefence Logo" />
                 <span>DigiDefence</span>
             </div>
 
@@ -25,7 +41,7 @@ const Navbar = () => {
                     <Link to="#">Services <FaChevronDown className="dropdown-icon" /></Link>
                     {dropdown === "services" && (
                         <ul className="dropdown-menu">
-                            <li><Link to="/cybersecurity">Cybersecurity</Link></li>
+                            <li><Link to="/technologyconsultant">Technology Consultancy</Link></li>
                             <li><Link to="/compliance">Compliance Consulting</Link></li>
                             <li><Link to="/data-protection">Data Protection</Link></li>
                             <li><Link to="/risk-management">Risk Management</Link></li>
@@ -46,13 +62,26 @@ const Navbar = () => {
                 </li>
 
                 <li className="dropdown"
+                    onMouseEnter={() => setDropdown("services")}
+                    onMouseLeave={() => setDropdown(null)}
+                >
+                    <Link to="#">Who we are<FaChevronDown className="dropdown-icon" /></Link>
+                    {dropdown === "services" && (
+                        <ul className="dropdown-menu">
+                            <li><Link to="/aboutus">About Us</Link></li>
+                            <li><Link to="/digidefencebandits">DigiDefence Bandits</Link></li>
+                        </ul>
+                    )}
+                </li>
+
+                <li className="dropdown"
                     onMouseEnter={() => setDropdown("resources")}
                     onMouseLeave={() => setDropdown(null)}
                 >
                     <Link to="#">Resources <FaChevronDown className="dropdown-icon" /></Link>
                     {dropdown === "resources" && (
                         <ul className="dropdown-menu">
-                            <li><Link to="/advisory">Advisory</Link></li> {/* ✅ Fixed Path */}
+                            <li><Link to="/advisory">Advisory</Link></li>
                             <li><Link to="/blog">Blog</Link></li>
                             <li><Link to="/case-studies">Case Studies</Link></li>
                         </ul>

@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .popup-container {
@@ -14,57 +14,63 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .popup {
-    background: white;
+    background: #fff;
     width: 50%;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     position: relative;
-    max-height: 90vh;
+    max-height: 85vh;
     overflow-y: auto;
 }
 
 .close-btn {
     position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 24px;
+    top: 12px;
+    right: 15px;
+    font-size: 22px;
     cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
 }
 
-h2,
-h3 {
+.close-btn:hover {
+    color: #d62839;
+}
+
+h2, h3 {
     color: #222;
 }
 
 h3 {
-    margin-top: 20px;
+    margin-top: 18px;
     font-size: 18px;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 label {
-    margin-top: 10px;
     font-weight: bold;
+    color: #333;
 }
 
 .required {
     color: red;
 }
 
-/* Radio button fix */
 .radio-group {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
 .radio-label {
@@ -72,6 +78,7 @@ label {
     align-items: center;
     gap: 5px;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .radio-label input {
@@ -85,31 +92,38 @@ label {
     border: 2px solid #333;
     display: inline-block;
     position: relative;
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
-.radio-label input:checked+.custom-radio {
+.radio-label input:checked + .custom-radio {
     background-color: #d62839;
     border-color: #d62839;
 }
 
-/* Form fields */
-input,
-select {
+input, select {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
+    transition: border 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #d62839;
+    outline: none;
 }
 
 button {
     background-color: #d62839;
     color: white;
-    padding: 10px;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     margin-top: 15px;
     cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 16px;
 }
 
 button:hover {
@@ -117,25 +131,28 @@ button:hover {
 }
 
 .testimonial {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 5px;
+    background: #6b9bce;
+    padding: 18px;
+    border-radius: 6px;
     margin-top: 20px;
     text-align: center;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .client {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 12px;
+    margin-top: 12px;
 }
 
 .client img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    border: 2px solid #fff;
 }
 
 .trusted-logos {
@@ -146,9 +163,13 @@ button:hover {
 .trusted-logos img {
     width: 80px;
     margin: 10px;
+    transition: transform 0.3s ease;
 }
 
-/* Mobile Responsive */
+.trusted-logos img:hover {
+    transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
     .popup {
         width: 90%;

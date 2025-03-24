@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import "../styles/HomePage.css";
-import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
-// Import assets
 
+// Import assets
 import backgroundVideo from "../assets/background.mp4";
 import Cutout from "../assets/CutoutLogo.png";
 
@@ -35,21 +33,6 @@ const HomePage = () => {
                     <img src={Cutout} alt="DigiDefence Cutout Logo" className="hero-logo" />
                 </div>
             </section>
-
-            {/* Footer */}
-            <footer>
-                <div className="footer-container">
-                    <h3>DigiDefence</h3>
-                    <p>Protecting your digital world, ensuring security and trust.</p>
-                    <div className="social-icons">
-                        <a href="#"><FaLinkedin /></a>
-                        <a href="#"><FaInstagram /></a>
-                        <a href="#"><FaFacebook /></a>
-                    </div>
-                    <Link to="/contact" className="contact-button">Contact Us</Link>
-                    <p className="copyright">&copy; 2025 DigiDefence. All rights reserved.</p>
-                </div>
-            </footer>
         </div>
     );
 };
