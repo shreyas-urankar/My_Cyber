@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./RiskAssessments.css";
-import logo from "./assets/logo.jpg";
-import riskBackground from "./assets/risk.jpg";
+import "../styles/RiskAssessments.css";
+import logo from "../assets/logo.jpg";
+import riskBackground from "../assets/risk.jpg";
 
 const RiskAssessments = () => {
   return (

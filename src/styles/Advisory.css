@@ -1,0 +1,120 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* Header */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d62839;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+nav ul li .cta {
+    background: #d62839;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Advisory Section */
+.advisory {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 120px 50px;
+    background-color: white;
+}
+
+/* Content Styling */
+.content {
+    max-width: 50%;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #222;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Button Styling */
+button {
+    background-color: #d62839;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #b71c28;
+}
+
+/* Image Styling */
+.image-container img {
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .advisory {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .image-container img {
+        width: 80%;
+    }
+}
