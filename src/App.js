@@ -9,6 +9,8 @@ import Advisory from "./components/Advisory";
 import GetStarted from "./components/GetStarted";
 import AboutUs from "./components/AboutUs";
 import TecnologyConsultant from "./components/TechnologyConsultant";
+import Blog from "./components/Blog";
+import ComplianceAssessment from "./components/ComplianceAssessment";
 const App = () => {
   return (
     <Router>
@@ -21,7 +23,8 @@ const App = () => {
         <Route path="/getstarted" element={<GetStarted />} /> 
         <Route path="/technologyconsultant" element={<TecnologyConsultant />} /> 
         <Route path="/aboutus" element={<AboutUs />} /> 
-
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/complianceassessment" element={<ComplianceAssessment />} /> 
       </Routes>
       <Footer />
     </Router>

@@ -1,0 +1,80 @@
+.blog-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #181818;
+    color: #ffffff;
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 195, 255, 0.2);
+  }
+  
+  .blog-header {
+    padding-top: 7%;
+    text-align: center;
+    border-bottom: 2px solid #00c3ff;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .blog-header h1 {
+    color: #00c3ff;
+    font-size: 2.2rem;
+  }
+  
+  .blog-header p {
+    font-size: 1rem;
+    color: #bdbdbd;
+  }
+  
+  .blog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .blog-post {
+    padding: 15px;
+    border-left: 5px solid #00c3ff;
+    background-color: #222222;
+    border-radius: 8px;
+  }
+  
+  .blog-post h2 {
+    color: #00c3ff;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .blog-post ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .blog-post ul li {
+    background: url("https://img.icons8.com/fluency/20/checked.png") no-repeat left center;
+    background-size: 20px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .attack-section {
+    margin-bottom: 20px;
+  }
+  
+  .attack-section h3 {
+    color: #ff5e5e;
+    font-size: 1.5rem;
+  }
+  
+  .attack-section p {
+    color: #bdbdbd;
+  }
+  
+  .attack-section strong {
+    color: #00c3ff;
+    display: block;
+    margin-top: 5px;
+  }
+  

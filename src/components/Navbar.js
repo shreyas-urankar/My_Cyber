@@ -32,8 +32,7 @@ const Navbar = () => {
             </div>
 
             <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-                <li><Link to="/">Home</Link></li>
-
+            <li ><Link to="/">Home</Link></li>
                 <li className="dropdown"
                     onMouseEnter={() => setDropdown("services")}
                     onMouseLeave={() => setDropdown(null)}
@@ -42,7 +41,7 @@ const Navbar = () => {
                     {dropdown === "services" && (
                         <ul className="dropdown-menu">
                             <li><Link to="/technologyconsultant">Technology Consultancy</Link></li>
-                            <li><Link to="/compliance">Compliance Consulting</Link></li>
+                            <li><Link to="/complianceassessment">Compliance Consulting</Link></li>
                             <li><Link to="/data-protection">Data Protection</Link></li>
                             <li><Link to="/risk-management">Risk Management</Link></li>
                         </ul>

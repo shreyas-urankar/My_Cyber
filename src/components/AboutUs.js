@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import "../styles/AboutUs.css";
 import backgroundImage from "../assets/TechnologyServicePageBackground.jpg"; 
 
