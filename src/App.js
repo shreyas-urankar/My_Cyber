@@ -10,7 +10,7 @@ import GetStarted from "./components/GetStarted";
 import AboutUs from "./components/AboutUs";
 import TecnologyConsultant from "./components/TechnologyConsultant";
 import Blog from "./components/Blog";
-import ComplianceAssessment from "./components/ComplianceAssessment";
+import ComplianceAssessment from "./components/compliance_assessment";hi
 const App = () => {
   return (
     <Router>
@@ -24,7 +24,7 @@ const App = () => {
         <Route path="/technologyconsultant" element={<TecnologyConsultant />} /> 
         <Route path="/aboutus" element={<AboutUs />} /> 
         <Route path="/blog" element={<Blog />} />
-        <Route path="/complianceassessment" element={<ComplianceAssessment />} /> 
+        <Route path="/complianceassessment" element={<compliance_assessment />} /> 
       </Routes>
       <Footer />
     </Router>

@@ -41,7 +41,7 @@ const Navbar = () => {
                     {dropdown === "services" && (
                         <ul className="dropdown-menu">
                             <li><Link to="/technologyconsultant">Technology Consultancy</Link></li>
-                            <li><Link to="/complianceassessment">Compliance Consulting</Link></li>
+                            <li><Link to="/compliance_assessment">Compliance Consulting</Link></li>
                             <li><Link to="/data-protection">Data Protection</Link></li>
                             <li><Link to="/risk-management">Risk Management</Link></li>
                         </ul>
