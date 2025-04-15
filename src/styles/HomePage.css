@@ -3,101 +3,411 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background: #000;
-    color: white;
-}
-
-
-/* Hero Section */
-.hero {
+    font-family: "Inter", sans-serif;
+  }
+  
+  body {
+    background: #f8fafc;
+    color: #1e2a3c;
+  }
+  
+  /* Hero Section */
+  .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    padding: 0 10%;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
     overflow: hidden;
-}
-
-.background-video {
+  }
+  
+  .hero::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.overlay {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+    z-index: 1;
+  }
+  
+  .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.hero-content {
-    position: relative;
+    background: rgba(0, 0, 0, 0.4);
     z-index: 2;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 700px;
+    text-align: left;
     color: white;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
-
-.hero-logo {
-    margin-top: 20px;
-    width: 150px;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content .highlight {
+    color: #f43f5e;
+    text-shadow: 0 0 8px rgba(244, 63, 94, 0.5);
+  }
+  
+  .hero-content .hero-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .hero-content .highlight-text {
+    color: #f43f5e;
+    font-weight: 700;
+  }
+  
+  .hero-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #f43f5e;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .hero-button:hover {
+    background: #e11d48;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+  }
+  
+  /* About Section */
+  .about {
+    padding: 80px 10%;
+    background: #ffffff;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    text-align: left;
+  }
+  
+  .about h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+  
+  .about-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .about-button:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+  }
+  
+  /* Services Section */
+  .services {
+    padding: 80px 10%;
+    background: #f1f5f9;
+  }
+  
+  .services h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e3a8a;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+  }
+  
+  .service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .service-card .service-icon {
+    font-size: 40px;
+    color: #3b82f6;
+    margin-bottom: 20px;
+  }
+  
+  .service-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+  }
+  
+  .service-card p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Why Choose Us Section */
+  .why-choose-us {
+    padding: 80px 10%;
+    background: #ffffff;
+  }
+  
+  .why-choose-us h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e3a8a;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  
+  .why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+  }
+  
+  .why-card {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .why-card:hover {
+    background: #e6f3fa;
+    transform: translateY(-5px);
+  }
+  
+  .why-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+  }
+  
+  .why-card p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* CTA Section */
+  .cta {
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    text-align: left;
+  }
+  
+  .cta-content {
+    max-width: 800px;
+  }
+  
+  .cta h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .cta p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .cta .cta-footer {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #f43f5e;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background: #e11d48;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 30px 10%;
+    background: #1e2a3c;
+    color: #cbd5e1;
+    text-align: center;
+  }
+  
+  .footer p {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #f43f5e;
+  }
+  
+  /* Scroll Animations */
+  .about,
+  .services,
+  .why-choose-us,
+  .cta {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .about.animate,
+  .services.animate,
+  .why-choose-us.animate,
+  .cta.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .hero {
+      padding: 0 8%;
     }
-
-    .nav-links.open {
-        display: flex;
+  
+    .about,
+    .services,
+    .why-choose-us,
+    .cta {
+      padding: 60px 8%;
     }
-
-    .nav-links li {
-        margin: 10px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 40px;
     }
-
-    .dropdown-menu {
-        position: static;
-        width: 100%;
-        opacity: 1;
-        transform: none;
-        display: none;
+  
+    .hero-content .hero-description {
+      font-size: 16px;
     }
-
-    .dropdown:hover .dropdown-menu {
-        display: block;
+  
+    .about h2,
+    .services h2,
+    .why-choose-us h2,
+    .cta h2 {
+      font-size: 24px;
     }
-
-    .menu-toggle {
-        display: block;
+  
+    .service-card {
+      padding: 25px;
     }
-}
+  
+    .service-card h3 {
+      font-size: 20px;
+    }
+  
+    .hero,
+    .about,
+    .services,
+    .why-choose-us,
+    .cta {
+      padding: 50px 5%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-content h1 {
+      font-size: 32px;
+    }
+  
+    .hero-content .hero-description {
+      font-size: 15px;
+    }
+  
+    .about h2,
+    .services h2,
+    .why-choose-us h2,
+    .cta h2 {
+      font-size: 22px;
+    }
+  
+    .about p,
+    .services p,
+    .why-choose-us p,
+    .cta p {
+      font-size: 15px;
+    }
+  
+    .hero-button,
+    .about-button,
+    .cta-button {
+      padding: 12px 20px;
+      font-size: 15px;
+    }
+  
+    .service-card .service-icon {
+      font-size: 35px;
+    }
+  }
