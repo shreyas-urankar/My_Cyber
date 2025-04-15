@@ -10,7 +10,7 @@ import GetStarted from "./components/GetStarted";
 import AboutUs from "./components/AboutUs";
 import TecnologyConsultant from "./components/TechnologyConsultant";
 import Blog from "./components/Blog";
-import ComplianceAssessment from "./components/compliance_assessment";hi
+import ComplianceAssessment from "./components/compliance_assessment";
 const App = () => {
   return (
     <Router>
